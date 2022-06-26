@@ -1,0 +1,20 @@
+
+
+
+Download Android Studio and set Emulator
+
+HOW TO DOWNLOAD ANDROID STUDIO ON MAC 
+	1. Go to https://developer.android.com/studio
+	2. Move it to Applications folder after the download is completed
+	3. Find it in Applications folder and launch it
+
+HOW TO DOWNLOAD ANDROID STUDIO ON WINDOWS
+ 	1. Go to https://developer.android.com/studio
+ 	2. Download Android Studio for Windows
+
+HOW TO CREATE A NEW PROJECT AND CREATE A NEW DEVICE FROM DEVICE MANAGER
+	1. Launch Android Studio and create a new project and give it proper name
+	2. Go to "Device Manager" select "Create device"
+	3. Pick the device from the list you want to create and select "Next"
+	4. Name your device as you wish, make sure "Portrait" is selected and select "Finish"
+	5. Run your device and make sure it works

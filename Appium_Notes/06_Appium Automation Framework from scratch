@@ -1,0 +1,11 @@
+
+
+
+Appium Automation Framework from scratch
+
+	1. Create a new Maven project on preferred IDE (I use IntelliJ IDEA)
+	2. Get below required dependencies from https://mvnrepository.com/
+		-Appium Java Client
+		-Selenium WebDriver
+		-TestNG
+		

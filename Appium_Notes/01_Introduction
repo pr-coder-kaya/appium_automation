@@ -1,0 +1,35 @@
+
+
+
+Introduction
+-Appium is an open source tool to automate mobile applications
+-It is a cross-platform test automation tool for native, hybrid, and mobile web apps.
+-It supports simulators (iOS), emulators (Android), and real devices (iOS, Android, Windows, Mac).
+-It supports multiple programming languages.
+
+
+Desired Capabilities: a set of keys and values sent to Appium server to define what kind of automation session we are interested in starting up.
+-The minimum set of required capabilities for any Appium driver should include:
+
+-platformName: the name of the platform to automate
+-platformVersion: the version of the platform to automate
+-deviceName: the kind of device to automate
+-app: the path to the app you want to automate (but use the browserName capability instead in the case of automating a web browser)
+-automationName: the name of the driver you wish to use
+
+
+USEFUL LINKS
+-Appium official website
+https://appium.io/
+
+-Appium official documentation
+http://appium.io/docs/en/about-appium/intro/
+
+-Appium platform support
+http://appium.io/docs/en/about-appium/platform-support/index.html
+
+-Appium GitHub page
+https://github.com/appium/appium
+
+Appium client libraries (languages supported)
+http://appium.io/downloads

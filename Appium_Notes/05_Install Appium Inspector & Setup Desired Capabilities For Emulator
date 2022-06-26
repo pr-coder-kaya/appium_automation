@@ -1,0 +1,36 @@
+
+
+
+
+Install Appium Inspector & Setup Desired Capabilities For Emulator
+
+1. MAC
+	1. Launch Appium Server
+	2. Click on inspector icon
+	3. Click on release and download Appium-Inspector-mac{version}.dmg file
+	4. Move Appium Inspector to Applications
+	5. Find the Appium Inspector in Applications folder and launch it
+
+NOTE: if you get an error states "“Appium Inspector” can’t be opened because Apple cannot check it for malicious software." Then, follow below:
+-Go to System Preferences > Security & Privacy > General.
+-Click on the "open anyway" button.
+-Once it's done, try to open appium again.
+
+SET DESIRED CAPABILITIES ON APPIUM INSPECTOR AND SAVE IT
+An example is here -> https://appium.io/docs/en/writing-running-appium/caps/
+https://github.com/appium/appium-uiautomator2-driver#capabilities
+
+platformName = Android
+platformVersion = 11 (check to make sure from device settings)
+deviceName = pixel_4 (that is the name you define for your emulator)
+automationName = UIAutomator2
+appPackage = 
+appActivity = 
+
+
+HOW TO FIND APP-PACKAGE and APP-ACTIVITY
+
+
+
+
+

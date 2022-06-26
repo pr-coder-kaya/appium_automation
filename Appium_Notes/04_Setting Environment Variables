@@ -1,0 +1,34 @@
+
+
+
+Setting Environment Variables
+
+1. MAC
+	Make sure you have JAVA_HOME and ANDROID_HOME is set properly as below in your .bash_profile
+
+	export JAVA_HOME=$(/usr/libexec/java_home)
+	export PATH=${JAVA_HOME}/bin:$PATH
+	export MAVEN_HOME=/Applications/apache-maven-3.8.4
+	export M2_HOME=$MAVEN_HOME/bin
+	export PATH:$PATH:usr/local/git/bin:usr/local/bin:
+	export ANDROID_HOME="/Users/userName/Library/Android/sdk"
+	export PATH=$HOME/bin:/usr/local/bin:$PATH:$ANDROID_HOME:$ANDROID_HOME/tools:$ANDROID_HOME/tools/bin:$ANDROID_HOME/platform-tools
+
+	NOTE: After updating your .bash_profile, run below command
+	source .bash_profile
+
+Check your terminal if it is zsh or shell
+NOTE: if you have zsh instead of shell, then follow below
+	1. Go to Terminal
+	2. Run the command <open .zshrc> (create the file if does not exist)
+	3. Copy-paste below lines and save it
+
+	export ANDROID_HOME="/Users/userName/Library/Android/sdk"
+	export PATH=$HOME/bin:/usr/local/bin:$PATH:$ANDROID_HOME:$ANDROID_HOME/tools:$ANDROID_HOME/tools/bin:$ANDROID_HOME/platform-tools
+
+	4. Quit terminal and start it again
+	5. Run command <adb> and make sure it works
+
+
+
+2. WINDOWS
