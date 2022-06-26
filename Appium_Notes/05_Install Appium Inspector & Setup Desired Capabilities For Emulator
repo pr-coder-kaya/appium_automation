@@ -29,7 +29,8 @@ appActivity =
 
 
 HOW TO FIND APP-PACKAGE and APP-ACTIVITY
-
+We can run below command to get appPackage and appActivity for native apps
+adb shell dumpsys window | grep -E 'mCurrentFocus'
 
 
 
