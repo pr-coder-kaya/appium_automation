@@ -20,7 +20,7 @@ NOTE: if you have zsh instead of shell, then follow below
 	3. Copy-paste below lines and save it
 
 	export JAVA_HOME=$(/usr/libexec/java_home)
-	export ANDROID_HOME="/Users/userName/Library/Android/sdk"
+	export ANDROID_HOME="$HOME/Library/Android/sdk"
 	export PATH=$HOME/bin:/usr/local/bin:$PATH:$ANDROID_HOME:$ANDROID_HOME/tools:$ANDROID_HOME/tools/bin:$ANDROID_HOME/platform-tools
 
 	4. Quit terminal and start it again
