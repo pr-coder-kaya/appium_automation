@@ -13,7 +13,6 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.htmlunit.HtmlUnitDriver;
-import org.openqa.selenium.remote.CapabilityType;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.safari.SafariDriver;
@@ -30,16 +29,16 @@ public class Driver extends Environment {
         if(isMobile && !isBrowser) appiumDriver = getAppiumDriver();
         else {
             webDriver = getWebDriver();
-            webDriver.get(appURL);
+            webDriver.get(webAppURL);
         }
     }
 
     public static WebDriver getWebDriver() {
         if (webDriver == null) {
             if (isMobile && isBrowser) {
-                caps.setCapability(AndroidMobileCapabilityType.PLATFORM_NAME, platformName);
+                caps.setCapability(MobileCapabilityType.PLATFORM_NAME, platformName);
                 caps.setCapability(MobileCapabilityType.DEVICE_NAME, deviceName);
-                caps.setCapability(CapabilityType.BROWSER_NAME, browser);
+                caps.setCapability(MobileCapabilityType.BROWSER_NAME, browser);
                 webDriver = new RemoteWebDriver(appiumURL, caps);
             } else {
                 switch (browser.toLowerCase()) {

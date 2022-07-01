@@ -14,7 +14,7 @@ public class CarvanaTest extends Base {
         carvanaCarFinderPage = new CarvanaCarFinderPage();
     }
 
-    @Test
+    @Test(priority = 1, description = "Validate CAR FINDER menu item")
     public void validateCarFinder(){
         carvanaHomePage.clickOnCarFinderLink();
         carvanaCarFinderPage.validateMainHeader();

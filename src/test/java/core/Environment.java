@@ -11,7 +11,7 @@ public class Environment {
     public static final String appPackage = ConfigReader.getProperty("appPackage");
     public static final String appActivity = ConfigReader.getProperty("appActivity");
     public static final String browser = ConfigReader.getProperty("browser");
-    public static final String appURL = ConfigReader.getProperty("webAppUrl");
+    public static final String webAppURL = ConfigReader.getProperty("webAppUrl");
     public static final int implicitTime = Integer.parseInt(ConfigReader.getProperty("implicitWait"));
     public static final int explicitTime = Integer.parseInt(ConfigReader.getProperty("explicitWait"));
     public static URL appiumURL;
