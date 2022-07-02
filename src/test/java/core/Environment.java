@@ -4,19 +4,27 @@ import java.net.MalformedURLException;
 import java.net.URL;
 
 public class Environment {
-    public static final boolean isMobile = Boolean.parseBoolean(ConfigReader.getProperty("isMobile"));
-    public static final boolean isBrowser = Boolean.parseBoolean(ConfigReader.getProperty("isBrowser"));
-    public static final String platformName = ConfigReader.getProperty("platformName");
-    public static final String deviceName = ConfigReader.getProperty("deviceName");
-    public static final String appPackage = ConfigReader.getProperty("appPackage");
-    public static final String appActivity = ConfigReader.getProperty("appActivity");
-    public static final String browser = ConfigReader.getProperty("browser");
-    public static final String webAppURL = ConfigReader.getProperty("webAppUrl");
-    public static final int implicitTime = Integer.parseInt(ConfigReader.getProperty("implicitWait"));
-    public static final int explicitTime = Integer.parseInt(ConfigReader.getProperty("explicitWait"));
+    public static boolean isMobile;
+    public static String platformName;
+    public static String deviceName;
+    public static String appPackage;
+    public static String appActivity;
+    public static String browser;
+    public static String applicationURL;
+    public static int implicitTime;
+    public static int explicitTime;
     public static URL appiumURL;
 
-    static {
+    public static void setEnvironment(){
+        isMobile = Boolean.parseBoolean(ConfigReader.getProperty("isMobile"));
+        platformName = ConfigReader.getProperty("platformName");
+        deviceName = ConfigReader.getProperty("deviceName");
+        appPackage = ConfigReader.getProperty("appPackage");
+        appActivity = ConfigReader.getProperty("appActivity");
+        browser = ConfigReader.getProperty("browser");
+        applicationURL = ConfigReader.getProperty("applicationURL");
+        implicitTime = Integer.parseInt(ConfigReader.getProperty("implicitWait"));
+        explicitTime = Integer.parseInt(ConfigReader.getProperty("explicitWait"));
         try {
             appiumURL = new URL("http://127.0.0.1:4723/wd/hub/");
         } catch (MalformedURLException e) {

@@ -13,7 +13,7 @@ public class WebDriverWaiter {
     private static final Wait<WebDriver> wait;
 
     static{
-        wait = new WebDriverWait(Driver.getWebDriver(), Driver.explicitTime);
+        wait = new WebDriverWait(Driver.getDriver(), Driver.explicitTime);
     }
 
     public static void pause(int seconds){

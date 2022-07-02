@@ -1,11 +1,5 @@
 package core;
 
-import io.appium.java_client.AppiumDriver;
-import io.appium.java_client.android.AndroidDriver;
-import io.appium.java_client.android.AndroidElement;
-import io.appium.java_client.ios.IOSDriver;
-import io.appium.java_client.ios.IOSElement;
-import io.appium.java_client.remote.AndroidMobileCapabilityType;
 import io.appium.java_client.remote.MobileCapabilityType;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.NotFoundException;
@@ -21,85 +15,60 @@ import java.util.concurrent.TimeUnit;
 
 public class Driver extends Environment {
 
-    protected static WebDriver webDriver;
-    protected static AppiumDriver appiumDriver;
-    private static DesiredCapabilities caps = new DesiredCapabilities();
+    private Driver(){}
 
-    static{
-        if(isMobile && !isBrowser) appiumDriver = getAppiumDriver();
-        else {
-            webDriver = getWebDriver();
-            webDriver.get(webAppURL);
-        }
-    }
+    private static WebDriver driver;
+    private static final DesiredCapabilities caps = new DesiredCapabilities();
 
-    public static WebDriver getWebDriver() {
-        if (webDriver == null) {
-            if (isMobile && isBrowser) {
+    public static WebDriver getDriver() {
+        setEnvironment();
+        if (driver == null) {
+            if (isMobile) {
                 caps.setCapability(MobileCapabilityType.PLATFORM_NAME, platformName);
                 caps.setCapability(MobileCapabilityType.DEVICE_NAME, deviceName);
                 caps.setCapability(MobileCapabilityType.BROWSER_NAME, browser);
-                webDriver = new RemoteWebDriver(appiumURL, caps);
+                driver = new RemoteWebDriver(appiumURL, caps);
             } else {
                 switch (browser.toLowerCase()) {
                     case "chrome":
                         WebDriverManager.chromedriver().setup();
-                        webDriver = new ChromeDriver();
+                        driver = new ChromeDriver();
                         break;
                     case "firefox":
                         WebDriverManager.firefoxdriver().setup();
-                        webDriver = new FirefoxDriver();
+                        driver = new FirefoxDriver();
                         break;
                     case "safari":
                         WebDriverManager.getInstance(SafariDriver.class).setup();
-                        webDriver = new SafariDriver();
+                        driver = new SafariDriver();
                         break;
                     case "headless":
-                        webDriver = new HtmlUnitDriver();
+                        driver = new HtmlUnitDriver();
                         break;
                     default:
                         throw new NotFoundException("WebDriver is not set properly!");
                 }
                 if (!browser.equalsIgnoreCase("headless")) {
-                    webDriver.manage().window().maximize();
+                    driver.manage().window().maximize();
                 }
             }
-            webDriver.manage().timeouts().pageLoadTimeout(implicitTime, TimeUnit.SECONDS);
-            webDriver.manage().timeouts().implicitlyWait(implicitTime, TimeUnit.SECONDS);
+            driver.manage().timeouts().implicitlyWait(implicitTime, TimeUnit.SECONDS);
+            driver.get(applicationURL);
         }
-        return webDriver;
+        return driver;
     }
 
     public static void quitDriver() {
-        if (webDriver != null) {
-            webDriver.manage().deleteAllCookies();
-            webDriver.quit();
-            webDriver = null;
-        } else if (appiumDriver != null) {
-            appiumDriver.quit();
-            appiumDriver = null;
-        }
-    }
-
-    public static AppiumDriver getAppiumDriver() {
-        if (isMobile && !isBrowser) {
-            caps.setCapability(AndroidMobileCapabilityType.PLATFORM_NAME, platformName);
-            caps.setCapability(MobileCapabilityType.DEVICE_NAME, deviceName);
-            caps.setCapability("appPackage", appPackage);
-            caps.setCapability("appActivity", appActivity);
-
-            switch (platformName.toLowerCase()) {
-                case "android":
-                    appiumDriver = new AndroidDriver<AndroidElement>(appiumURL, caps);
-                    break;
-                case "ios":
-                    appiumDriver = new IOSDriver<IOSElement>(appiumURL, caps);
-                    break;
-                default:
-                    throw new NotFoundException("AppiumDriver is not set properly!");
+        if (driver != null) {
+            try{
+                driver.manage().deleteAllCookies();
+            }catch (Exception e){
+                e.printStackTrace();
             }
-            return appiumDriver;
+            finally {
+                driver.quit();
+                driver = null;
+            }
         }
-        return null;
     }
 }

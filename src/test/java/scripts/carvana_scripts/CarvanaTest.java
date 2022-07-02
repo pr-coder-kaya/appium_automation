@@ -1,18 +1,10 @@
 package scripts.carvana_scripts;
 
-import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
-import pages.carvana_pages.CarvanaCarFinderPage;
-import pages.carvana_pages.CarvanaHomePage;
+import pages.carvana_pages.CarvanaSellTradePage.Toggle;
 import scripts.Base;
 
 public class CarvanaTest extends Base {
-
-    @BeforeClass
-    public void setPages(){
-        carvanaHomePage = new CarvanaHomePage();
-        carvanaCarFinderPage = new CarvanaCarFinderPage();
-    }
 
     @Test(priority = 1, description = "Validate CAR FINDER menu item")
     public void validateCarFinder(){
@@ -23,5 +15,16 @@ public class CarvanaTest extends Base {
         carvanaCarFinderPage.clickOnTryCarFinderLink();
         carvanaCarFinderPage.validateHeadline();
         carvanaCarFinderPage.validateSubHeadline();
+    }
+
+    @Test(priority = 2, description = "Validate SELL/TRADE invalid vin search")
+    public void validateInvalidVINSearch(){
+        carvanaHomePage.clickOnSellTradeLink();
+        carvanaSellTradePage.validateMainHeader();
+        carvanaSellTradePage.validateSubHeader();
+        carvanaSellTradePage.clickOnToggleButton(Toggle.VIN);
+        carvanaSellTradePage.sendKeysToVINInputBox(carvanaTestData.getInvalid_VIN());
+        carvanaSellTradePage.clickOnGetMyOfferButton();
+        carvanaSellTradePage.validateInvalidVINErrorMessage();
     }
 }

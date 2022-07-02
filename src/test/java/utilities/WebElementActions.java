@@ -8,30 +8,30 @@ public class WebElementActions {
     private static Actions actions;
 
     static{
-        actions = new Actions(Driver.getWebDriver());
+        actions = new Actions(Driver.getDriver());
     }
 
-    public static void moveToElement(WebElement element){
+    public static void actionsMoveToElement(WebElement element){
         actions.moveToElement(element).perform();
     }
 
-    public static void doubleClick(WebElement element){
+    public static void actionsDoubleClick(WebElement element){
         actions.doubleClick(element).perform();
     }
 
-    public static void rightClick(WebElement element){
+    public static void actionsRightClick(WebElement element){
         actions.contextClick(element).perform();
     }
 
-    public static void clickAndHold(WebElement element){
+    public static void actionsClickAndHold(WebElement element){
         actions.clickAndHold(element).perform();
     }
 
-    public static void release(WebElement element){
+    public static void actionsRelease(WebElement element){
         actions.release(element).perform();
     }
 
-    public static void dragAndDrop(WebElement sourceElement, WebElement targetElement){
+    public static void actionsDragAndDrop(WebElement sourceElement, WebElement targetElement){
         actions.dragAndDrop(sourceElement, targetElement).perform();
     }
 }

@@ -9,4 +9,10 @@ public class CarvanaExpectedTexts {
         public static final String headline = "WHAT IS MOST IMPORTANT TO YOU IN YOUR NEXT CAR?";
         public static final String sub_headline = "Select up to 4 in order of importance";
     }
+
+    public static class SellTrade {
+        public static final String main_header = "GET A REAL OFFER IN 2 MINUTES";
+        public static final String sub_header = "We pick up your car. You get paid on the spot.";
+        public static final String invalid_VIN_error_message = "We couldn’t find that VIN. Please check your entry and try again.";
+    }
 }
