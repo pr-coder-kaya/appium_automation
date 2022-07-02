@@ -1,3 +1,11 @@
-/Users/akinkaya/IdeaProjects/appium_automation/src/test/java/utilities/Driver.java
-/Users/akinkaya/IdeaProjects/appium_automation/src/test/java/utilities/ConfigReader.java
-/Users/akinkaya/IdeaProjects/appium_automation/src/test/java/Test.java
+/Users/akinkaya/IdeaProjects/appium_automation/src/test/java/utilities/WebElementActions.java
+/Users/akinkaya/IdeaProjects/appium_automation/src/test/java/expected_texts/CarvanaExpectedTexts.java
+/Users/akinkaya/IdeaProjects/appium_automation/src/test/java/core/Environment.java
+/Users/akinkaya/IdeaProjects/appium_automation/src/test/java/utilities/WebDriverWaiter.java
+/Users/akinkaya/IdeaProjects/appium_automation/src/test/java/pages/carvana_pages/CarvanaHomePage.java
+/Users/akinkaya/IdeaProjects/appium_automation/src/test/java/pages/carvana_pages/CarvanaCarFinderPage.java
+/Users/akinkaya/IdeaProjects/appium_automation/src/test/java/core/Driver.java
+/Users/akinkaya/IdeaProjects/appium_automation/src/test/java/scripts/Base.java
+/Users/akinkaya/IdeaProjects/appium_automation/src/test/java/core/ConfigReader.java
+/Users/akinkaya/IdeaProjects/appium_automation/src/test/java/scripts/carvana_scripts/CarvanaTest.java
+/Users/akinkaya/IdeaProjects/appium_automation/src/test/java/pages/BasePage.java

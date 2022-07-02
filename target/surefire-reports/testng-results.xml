@@ -1,11 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="0" passed="0">
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Test" duration-ms="4" started-at="2022-06-23T15:32:42 CDT" finished-at="2022-06-23T15:32:42 CDT">
+  <suite name="scripts.carvana_scripts.CarvanaTest" duration-ms="2166" started-at="2022-07-01T15:47:57 CDT" finished-at="2022-07-01T15:47:59 CDT">
     <groups>
     </groups>
-    <test name="Command line test" duration-ms="4" started-at="2022-06-23T15:32:42 CDT" finished-at="2022-06-23T15:32:42 CDT">
+    <test name="Command line test" duration-ms="2166" started-at="2022-07-01T15:47:57 CDT" finished-at="2022-07-01T15:47:59 CDT">
+      <class name="scripts.carvana_scripts.CarvanaTest">
+        <test-method status="PASS" signature="setPages()[pri:0, instance:scripts.carvana_scripts.CarvanaTest@29526c05]" name="setPages" is-config="true" duration-ms="16" started-at="2022-07-01T15:47:57 CDT" finished-at="2022-07-01T15:47:57 CDT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setPages -->
+        <test-method status="PASS" signature="validateCarFinder()[pri:1, instance:scripts.carvana_scripts.CarvanaTest@29526c05]" name="validateCarFinder" duration-ms="1642" started-at="2022-07-01T15:47:57 CDT" description="Validate CAR FINDER menu item" finished-at="2022-07-01T15:47:59 CDT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateCarFinder -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:scripts.carvana_scripts.CarvanaTest@29526c05]" name="tearDown" is-config="true" duration-ms="488" started-at="2022-07-01T15:47:59 CDT" finished-at="2022-07-01T15:47:59 CDT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- scripts.carvana_scripts.CarvanaTest -->
     </test> <!-- Command line test -->
-  </suite> <!-- Test -->
+  </suite> <!-- scripts.carvana_scripts.CarvanaTest -->
 </testng-results>
