@@ -9,7 +9,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.util.List;
 
-public class WebDriverWaiter {
+public class Waiter {
     private static final Wait<WebDriver> wait;
 
     static{

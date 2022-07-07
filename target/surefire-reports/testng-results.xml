@@ -1,25 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="scripts.carvana_scripts.CarvanaTest" duration-ms="2166" started-at="2022-07-01T15:47:57 CDT" finished-at="2022-07-01T15:47:59 CDT">
+  <suite name="All Test Suite" duration-ms="26267" started-at="2022-07-07T15:16:01 CDT" finished-at="2022-07-07T15:16:27 CDT">
     <groups>
     </groups>
-    <test name="Command line test" duration-ms="2166" started-at="2022-07-01T15:47:57 CDT" finished-at="2022-07-01T15:47:59 CDT">
+    <test name="Regression" duration-ms="26267" started-at="2022-07-07T15:16:01 CDT" finished-at="2022-07-07T15:16:27 CDT">
       <class name="scripts.carvana_scripts.CarvanaTest">
-        <test-method status="PASS" signature="setPages()[pri:0, instance:scripts.carvana_scripts.CarvanaTest@29526c05]" name="setPages" is-config="true" duration-ms="16" started-at="2022-07-01T15:47:57 CDT" finished-at="2022-07-01T15:47:57 CDT">
+        <test-method status="PASS" signature="setDriver()[pri:0, instance:scripts.carvana_scripts.CarvanaTest@757942a1]" name="setDriver" is-config="true" duration-ms="4963" started-at="2022-07-07T15:16:01 CDT" finished-at="2022-07-07T15:16:06 CDT">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- setPages -->
-        <test-method status="PASS" signature="validateCarFinder()[pri:1, instance:scripts.carvana_scripts.CarvanaTest@29526c05]" name="validateCarFinder" duration-ms="1642" started-at="2022-07-01T15:47:57 CDT" description="Validate CAR FINDER menu item" finished-at="2022-07-01T15:47:59 CDT">
+        </test-method> <!-- setDriver -->
+        <test-method status="PASS" signature="validateCarFinder()[pri:1, instance:scripts.carvana_scripts.CarvanaTest@757942a1]" name="validateCarFinder" duration-ms="5198" started-at="2022-07-07T15:16:06 CDT" description="Validate CAR FINDER menu item" finished-at="2022-07-07T15:16:11 CDT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- validateCarFinder -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:scripts.carvana_scripts.CarvanaTest@29526c05]" name="tearDown" is-config="true" duration-ms="488" started-at="2022-07-01T15:47:59 CDT" finished-at="2022-07-01T15:47:59 CDT">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:scripts.carvana_scripts.CarvanaTest@757942a1]" name="tearDown" is-config="true" duration-ms="303" started-at="2022-07-07T15:16:11 CDT" finished-at="2022-07-07T15:16:11 CDT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="setDriver()[pri:0, instance:scripts.carvana_scripts.CarvanaTest@757942a1]" name="setDriver" is-config="true" duration-ms="4838" started-at="2022-07-07T15:16:11 CDT" finished-at="2022-07-07T15:16:16 CDT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setDriver -->
+        <test-method status="PASS" signature="validateInvalidVINSearch()[pri:2, instance:scripts.carvana_scripts.CarvanaTest@757942a1]" name="validateInvalidVINSearch" duration-ms="10756" started-at="2022-07-07T15:16:16 CDT" description="Validate SELL/TRADE invalid vin search" finished-at="2022-07-07T15:16:27 CDT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateInvalidVINSearch -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:scripts.carvana_scripts.CarvanaTest@757942a1]" name="tearDown" is-config="true" duration-ms="184" started-at="2022-07-07T15:16:27 CDT" finished-at="2022-07-07T15:16:27 CDT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- scripts.carvana_scripts.CarvanaTest -->
-    </test> <!-- Command line test -->
-  </suite> <!-- scripts.carvana_scripts.CarvanaTest -->
+    </test> <!-- Regression -->
+  </suite> <!-- All Test Suite -->
 </testng-results>

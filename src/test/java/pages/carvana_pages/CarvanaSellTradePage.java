@@ -5,7 +5,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.testng.Assert;
 import pages.BasePage;
-import utilities.WebDriverWaiter;
+import utilities.Waiter;
 
 import java.util.List;
 
@@ -63,7 +63,7 @@ public class CarvanaSellTradePage extends BasePage {
     }
 
     public void validateInvalidVINErrorMessage(){
-        WebDriverWaiter.waitUntilElementTextPresentToBe(invalidVINErrorMessage, CarvanaExpectedTexts.SellTrade.invalid_VIN_error_message);
+        Waiter.waitUntilElementTextPresentToBe(invalidVINErrorMessage, CarvanaExpectedTexts.SellTrade.invalid_VIN_error_message);
         Assert.assertEquals(invalidVINErrorMessage.getText(), CarvanaExpectedTexts.SellTrade.invalid_VIN_error_message);
     }
 }

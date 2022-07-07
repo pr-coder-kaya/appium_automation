@@ -1,12 +1,10 @@
 package pages.carvana_pages;
 
 
-import core.Driver;
-import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import pages.BasePage;
-import utilities.WebDriverWaiter;
+import utilities.Waiter;
 
 public class CarvanaHomePage extends BasePage {
     public CarvanaHomePage() {
@@ -36,11 +34,11 @@ public class CarvanaHomePage extends BasePage {
         if (isMobile) {
             mobileHeaderMenuOpen.click();
             //TODO - Add mobile browser explicit wait
-            WebDriverWaiter.pause(3);
+            Waiter.pause(3);
             mobileCarFinderLink.click();
         } else {
             //TODO - Add mobile browser explicit wait
-            WebDriverWaiter.pause(3);
+            Waiter.pause(3);
             carFinderLink.click();
         }
     }
@@ -49,11 +47,11 @@ public class CarvanaHomePage extends BasePage {
         if (isMobile) {
             mobileHeaderMenuOpen.click();
             //TODO - Add mobile browser explicit wait
-            WebDriverWaiter.pause(3);
+            Waiter.pause(3);
             mobileSellTradeLink.click();
         } else {
             //TODO - Add mobile browser explicit wait
-            WebDriverWaiter.pause(3);
+            Waiter.pause(3);
             sellTradeLink.click();
         }
     }
