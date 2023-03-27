@@ -5,11 +5,17 @@
 Install Appium Inspector & Setup Desired Capabilities For Emulator
 
 1. MAC
-	1. Launch Appium Server
-	2. Click on inspector icon
-	3. Click on release and download Appium-Inspector-mac{version}.dmg file
-	4. Move Appium Inspector to Applications
-	5. Find the Appium Inspector in Applications folder and launch it
+	1. Go to https://github.com/appium/appium-inspector/releases
+	2. Click on Appium-Inspector-mac{version}.dmg file
+	3. Move Appium Inspector to Applications
+	4. Find the Appium Inspector in Applications folder and launch it
+
+
+2. WINDOWS
+	1. Go to https://github.com/appium/appium-inspector/releases
+	2. Click on Appium-Inspector-windows{version}.exe file
+	3. Launch the Appium Inspector app
+
 
 NOTE: if you get an error states "“Appium Inspector” can’t be opened because Apple cannot check it for malicious software." Then, follow below:
 -Go to System Preferences > Security & Privacy > General.

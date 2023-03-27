@@ -4,17 +4,20 @@
 Setting Environment Variables
 
 1. MAC
-	Make sure you have JAVA_HOME and ANDROID_HOME is set properly as below in your .bash_profile
+	Make sure you have JAVA_HOME and ANDROID_HOME is set properly as below in your .bash_profile or .zshrc file
 
 	export JAVA_HOME=$(/usr/libexec/java_home)
 	export ANDROID_HOME="$HOME/Library/Android/sdk"
 	export PATH=$HOME/bin:/usr/local/bin:$PATH:$ANDROID_HOME:$ANDROID_HOME/tools:$ANDROID_HOME/tools/bin:$ANDROID_HOME/platform-tools
 
-	NOTE: After updating your .bash_profile, run below command
-	source .bash_profile
+	NOTE: After updating your .bash_profile or .zshrc file, run below command
+	source .bash_profile or source .zshrc
 
 Check your terminal if it is zsh or shell
-NOTE: if you have zsh instead of shell, then follow below
+-Run below command to check your terminal/shell
+echo $SHELL
+
+NOTE: if you have /bin/zsh instead of /bin/shell, then follow below
 	1. Go to Terminal
 	2. Run the command <open .zshrc> (create the file if does not exist)
 	3. Copy-paste below lines and save it
@@ -24,12 +27,23 @@ NOTE: if you have zsh instead of shell, then follow below
 	export PATH=$HOME/bin:/usr/local/bin:$PATH:$ANDROID_HOME:$ANDROID_HOME/tools:$ANDROID_HOME/tools/bin:$ANDROID_HOME/platform-tools
 
 	4. Quit terminal and start it again
-	5. Run command <adb> and make sure it works
+
+
+
+2. WINDOWS
+    Make sure you have JAVA_HOME and ANDROID_HOME is set properly in your Environment Variables
+
+    Set ANDROID _HOME -> C:\Users\{user}\AppData\Local\Android\Sdk
+    Set Path:
+        • Add “%ANDROID_HOME%”
+        • Add “%ANDROID_HOME%\tools”
+        • Add “%ANDROID_HOME%\platform-tools”
+
+
+NOTE: Run command <adb> and make sure it works
 
 	NOTE: We can run below command to see all available devices
 	adb devices
 
-	NOTE: We can run below command to get appPackage and appActivity for native apps
-	adb shell dumpsys window | grep -E 'mCurrentFocus'
-
-2. WINDOWS
+NOTE: We can run below command to get appPackage and appActivity for native apps
+adb shell dumpsys window | grep -E 'mCurrentFocus'

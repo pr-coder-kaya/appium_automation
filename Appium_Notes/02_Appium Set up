@@ -40,7 +40,7 @@ Installing appium with appium desktop client
 Step 1 : Download appium desktop client - http://appium.io/
    https://github.com/appium/appium-desktop
 
-Step 2 : Double click on the .dmg file to install appium desktop client
+Step 2 : Click on the .dmg file to install appium desktop client
 
 Step 3 : Start appium desktop client
 
@@ -48,6 +48,46 @@ NOTE: if you get an error states "“Appium Server GUI” can’t be opened beca
 -Go to System Preferences > Security & Privacy > General.
 -Click on the "open anyway" button.
 -Once it's done, try to open appium again.
+
+
+2. Setting up Appium on WINDOWS
+
+   	1. Install appium with node.js
+   	2. Install appium with with Appium Desktop Client
+   	3. Check installation & dependencies (appium-doctor)
+   	4. Uninstall appium
+
+Step 1 : Check if node is installed on your system
+    node -v
+
+If node is not installed follow Step 2 and install it
+Step 2 : Install node.js
+    https://nodejs.org/en/download/
+    https://brew.sh/
+    brew install node
+
+Step 3 : Check if node is installed
+    node -v
+    npm -v
+
+Step 4 : Install appium
+    npm install -g appium
+
+Step 5 : Check appium is installed
+    appium -v
+
+Step 6 : Start appium
+    appium
+
+
+Installing appium with appium desktop client
+
+Step 1 : Download appium desktop client - http://appium.io/
+   https://github.com/appium/appium-desktop
+
+Step 2 : Click on the .exe file to install appium desktop client
+
+Step 3 : Start appium desktop client
 
 
 
@@ -58,8 +98,8 @@ https://www.npmjs.com/package/appium-doctor
 https://github.com/appium/appium-doctor
 
 npm install appium-doctor -g
-appium-doctor --ios
-
+MAC -> appium-doctor --ios
+WINDOWS -> appium-doctor --android
 
 HOW TO UNINSTALL APPIUM
 
